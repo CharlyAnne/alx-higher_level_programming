@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""script takes in a URL, sends request to it and displays the 
-value of the variable in the response body
-Usage: ./5-hbtn_header.py https://alx-intranet.hbtn.io
+"""script sends request to a given URL and displays the X-Request-Id
+    as response body
 """
 import requests
 import sys
