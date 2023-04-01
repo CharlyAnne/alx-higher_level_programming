@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     req = requests.get(url)
     commits = req.json()
-    try: 
+    try:
         for i in range(10):
             print('{}: {}'.format(
                 commits[i].get('sha'),
