@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-    takes 2 args that list 10 commits of a given repo, using github API
+"""takes 2 args that list 10 commits of a given repo, using github API
     Usage: ./100-github_commits.py rails rails
 """
 import requests
