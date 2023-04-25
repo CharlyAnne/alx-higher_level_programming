@@ -14,11 +14,11 @@ request.get(url, (error, response, body) => {
   const tasksCompleted = {};
   data = data.filter(({ completed }) => completed === true);
   for (const todo of data) {
-    const userID = todo.userID;
-    if (tasksCompleted[userID]) {
-      tasksCompleted[userID] += 1;
+    const userId = todo.userId;
+    if (tasksCompleted[userId]) {
+      tasksCompleted[userId] += 1;
     } else {
-      tasksCompleted[userID] = 1;
+      tasksCompleted[userId] = 1;
     }
   }
   console.log(tasksCompleted);
