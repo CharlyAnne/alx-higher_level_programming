@@ -19,7 +19,7 @@ request.get(url, (error, response, body) => {
         console.log(error);
         return;
       }
-      console.log(JSON.parse(body).namw);
+      console.log(JSON.parse(body).name);
     });
   }
 });
