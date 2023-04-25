@@ -2,8 +2,9 @@
 // script prints all characters of a start Wars movie
 
 const request = require('request');
-const movieID = process.argv[2];
-const url = `https://swapi.dev/api/films/${movieID}/`;
+
+const movieId = process.argv[2];
+const url = `https://swapi.dev/api/films/${movieId}/`;
 
 request.get(url, (error, response, body) => {
   if (error) {
@@ -11,16 +12,14 @@ request.get(url, (error, response, body) => {
     return;
   }
 
-  const content = JSON.parse(body);
-  const characters = content.characters;
-  for (const character of characters) {
-    request(character, (error, body, response) => {
+  const data = JSON.parse(body).characters;
+  for (const user of data) {
+    request(user, (error, response, body) => {
       if (error) {
         console.log(error);
         return;
       }
-      const characterData = JSON.parse(body);
-      console.log(characterData.name);
+      console.log(JSON.parse(body).namw);
     });
   }
 });
