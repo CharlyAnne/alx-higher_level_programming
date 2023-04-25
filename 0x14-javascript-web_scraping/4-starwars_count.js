@@ -13,7 +13,7 @@ request.get(url, (error, response, body) => {
     JSON.parse(body).results.forEach((film) => {
       film.characters.forEach((character) => {
         if (character.includes(characterID)) {
-	  count += 1;
+          count += 1;
         }
       });
     });
